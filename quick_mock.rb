@@ -111,6 +111,7 @@ end
 
 service = ARGV[0].to_s
 file_name = ARGV[1].to_s
+output_file = ARGV[2].to_s
 
 inside_service = false
 outside_service = false
@@ -213,6 +214,10 @@ writable_methods.each_pair do |name, obj|
 end
 
 puts output.join("\n")
+
+File.open(output_file, 'w') do |file|
+  file.write(output.join("\n"))
+end 
 
 
 
