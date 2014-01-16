@@ -6,9 +6,9 @@ Requires a delicately formatted thrift file.
 
 #### Usage
 ```
-> ./quick_mock.rb service_name file_name
+> ./quick_mock.rb service_name file_name output_file_name
 ```
 
-Where service_name is the name of the thrift service you're looking for and file_name is the name of the .thrift file.
+Where service_name is the name of the thrift service you're looking for and file_name is the name of the .thrift file.  output_file_name is the name of the file you want to write the results to.
 
-It will output the result to the console where you can copy and paste into a file of your needs.
+It will also print out the results to the console.
