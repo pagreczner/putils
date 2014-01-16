@@ -83,16 +83,16 @@ def gen_viable_value(type, key)
     return "'#{key[0].upcase}-#{(rand*10000).to_i}-TEST'"
   elsif type == 'string'
     if key.downcase.index 'name'
-      return %w(John James Peter Mary Johnson Smith McGuiver Scully Mulder).sample
+      return "'#{%w(John James Peter Mary Johnson Smith McGuiver Scully Mulder).sample}'"
     elsif key.downcase.index 'email'
-      return %w(John James Peter Mary Johnson Smith McGuiver Scully Mulder).sample + "@isocket.com"
+      return "'#{%w(John James Peter Mary Johnson Smith McGuiver Scully Mulder).sample + "@isocket.com"}'"
     elsif key.downcase.index 'phone'
-      return "555-238-2312"
+      return "'555-238-2312'"
     else
-      return %w(Banana Apple Pear Kiwii Dumpling Pizza Animal Tofu).sample
+      return "'#{%w(Banana Apple Pear Kiwii Dumpling Pizza Animal Tofu).sample}'"
     end
   else
-    return ""
+    return "null"
   end
 
 end
@@ -202,7 +202,8 @@ writable_methods.each_pair do |name, obj|
     if not thrift_struct.nil?
       output << "#{tab}#{tab}#{thrift_struct.name.downcase} = "
       thrift_struct.components.each_pair do |component_name, component_type|
-        comp_partial = "#{tab}#{tab}#{tab}#{component_name}:#{tab}"
+        safe_component_name = component_name.gsub(/[^a-zA-Z\:]/,'')
+        comp_partial = "#{tab}#{tab}#{tab}#{safe_component_name}:#{tab}"
         comp_partial << gen_viable_value(component_type, component_name)
         output << comp_partial
       end
