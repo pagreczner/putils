@@ -1,5 +1,13 @@
 ## Some Utilities
 
+### uq_latest.sh
+Makes the most recent order entity visible which had been quarantined.
+
+#### Usage
+```
+> ./uq_latest.sh
+```
+
 ### quick_mock.rb
 Turns a .thrift file into a mock file in .coffee.  Finds all the available structs defined in the .thrift and all the methods used for a interface and creates the methods for that interface and applies the structs as returns where possible.
 Requires a delicately formatted thrift file.
