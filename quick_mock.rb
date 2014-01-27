@@ -200,7 +200,7 @@ writable_methods.each_pair do |name, obj|
   else
     thrift_struct = writable_structs[obj_type]
     if not thrift_struct.nil?
-      output << "#{tab}#{tab}#{thrift_struct.name.downcase} = "
+      output << "#{tab}#{tab}#{thrift_struct.name.downcase} ="
       thrift_struct.components.each_pair do |component_name, component_type|
         safe_component_name = component_name.gsub(/[^a-zA-Z\:]/,'')
         comp_partial = "#{tab}#{tab}#{tab}#{safe_component_name}:#{tab}"
