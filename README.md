@@ -1,5 +1,20 @@
 ## Some Utilities
 
+### setwebp.sh
+Turns on or off the web proxy from the command line.
+
+#### Usage
+```
+# Turn web proxy on (two methods)
+> ./setwebp.sh
+> ./setwebp.sh on
+```
+
+```
+# Turn web proxy off
+> ./setwebp.sh off
+```
+
 ### uq_latest.sh
 Makes the most recent order entity visible which had been quarantined.
 
