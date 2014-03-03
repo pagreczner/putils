@@ -39,8 +39,16 @@ Modified Files for Commit:
    
 # Add the file at index '2'
 > git iadd 2
-# Add both files at index '3' and '5'
-> git iadd 3,5
+
+> git istatus
+Modified Files for Commit:
+   1: src/my/file/one.java
+   2: src/my/three.java
+   3: conf/main.conf
+   4: README.md
+   
+# Add both files at index '2' and '4'
+> git iadd 2,4
 ```
 
 ### setwebp.sh
