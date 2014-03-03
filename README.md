@@ -1,5 +1,45 @@
 ## Some Utilities
 
+### Git Extensions
+Two git extenions that should make for easier adding of files to commit.
+#### git istatus
+This method shows the modified files with an index next to their file location.  Works the same as `git status`.
+__Usage__
+
+```
+> git istatus
+Modified Files for Commit:
+   1: src/my/file/one.java
+   2: src/my/file/two.java
+   3: src/my/three.java
+   4: conf/main.conf
+   5: README.md
+```
+
+#### git iadd
+This method allows you to add by index (gotten from `git istatus`) the file associated at that index for commit. Works the same as `git add <file_name>`.
+
+__Usage__
+
+`git iadd <index>`
+
+__Example__
+
+```
+> git istatus
+Modified Files for Commit:
+   1: src/my/file/one.java
+   2: src/my/file/two.java
+   3: src/my/three.java
+   4: conf/main.conf
+   5: README.md
+   
+# Add the file at index '2'
+> git iadd 2
+# Add both files at index '3' and '5'
+> git iadd 3,5
+```
+
 ### setwebp.sh
 Turns on or off the web proxy from the command line.
 
