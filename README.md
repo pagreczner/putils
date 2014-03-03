@@ -2,6 +2,9 @@
 
 ### Git Extensions
 Two git extenions that should make for easier adding of files to commit.
+
+_Make sure you include these file in your PATH for them to be accesable._
+
 #### git istatus
 This method shows the modified files with an index next to their file location.  Works the same as `git status`.
 __Usage__
