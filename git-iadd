@@ -1,12 +1,5 @@
 #!/usr/bin/env ruby
 
-# lgadd.rb
-
-#!/usr/bin/env ruby
-
-# lgstatus.rb
-
-# Print out the git status with modified count #'s
 
 git_command = 'git status'
 
@@ -24,7 +17,7 @@ modified_count = 1
 unstaged_index = ARGV[0].to_s
 
 if unstaged_index.nil?
-  puts "Improper index. Please run `lgstatus` to see indices. "
+  puts "Improper index. Please run `git istatus` to see indices. "
   return
 end
 

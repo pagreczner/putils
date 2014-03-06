@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-# lgstatus.rb
 
 # Print out the git status with modified count #'s
 
@@ -33,7 +32,7 @@ split_lines.each do |line|
     found_unstaged = !(line.downcase.index("changes not staged for commit").nil?)
     if found_unstaged
       puts "# Changes not staged for commit:" if found_unstaged
-      puts "# Use 'lgadd <index>', where <index> is the index of the file below to stage it for commit."
+      puts "# Use 'git iadd <index>', where <index> is the index of the file below to stage it for commit."
     end
   end
 
